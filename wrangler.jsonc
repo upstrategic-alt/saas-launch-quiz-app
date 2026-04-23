@@ -2,5 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "health-quiz-qpp",
   "compatibility_date": "2024-04-03",
-  "compatibility_flags": ["nodejs_compat"]
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://tygstrmousgolzfhxyyl.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_NSVZ_dz7SEokEBGP7rPC3Q_DqxN5ipx",
+    "RESEND_API_KEY": "re_YshUMzfx_FuMmWdoii5G6URtZhkWWo757"
+  }
 }
