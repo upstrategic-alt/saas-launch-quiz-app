@@ -1,75 +1,48 @@
-export interface Question {
-  id: number;
-  title: string;
-  options: {
-    id: 'A' | 'B';
-    text: string;
-  }[];
-}
+import { QuizStep } from "@/types/quiz";
 
-export const questions: Question[] = [
+export const quizSteps: QuizStep[] = [
   {
     id: 1,
-    title: "Core Challenge",
+    question: "What do you want to build or launch?",
     options: [
-      { id: 'A', text: "Figuring out if I'm doing it right — I follow instructions perfectly but constantly wonder if my specific situation requires adjustments." },
-      { id: 'B', text: "Getting bored with rigid rules — I want to understand the principles so I can adapt them to different situations." }
-    ]
+      { id: "funnel", label: "I need a high-converting funnel or landing page system to generate better leads.", value: 3000 },
+      { id: "ghl_saas", label: "I want to launch a branded GoHighLevel white-label SaaS system for my agency.", value: 5000 },
+      { id: "custom_app", label: "I need a custom client portal, dashboard, or internal web app for my business.", value: 10000 },
+    ],
   },
   {
     id: 2,
-    title: "Ideal Learning Style",
+    question: "What best describes your current setup?",
     options: [
-      { id: 'A', text: "Having an expert review my specific situation and tell me exactly what to do based on my unique circumstances." },
-      { id: 'B', text: "Getting the complete system with all the science so I can implement it independently." }
-    ]
+      { id: "scratch", label: "We are starting completely from scratch.", value: 1000 },
+      { id: "messy", label: "We already have some assets, but the setup is messy or incomplete.", value: 500 },
+      { id: "ready", label: "We have the core assets ready and mainly need expert implementation.", value: 0 },
+    ],
   },
   {
     id: 3,
-    title: "Problem-Solving Style",
+    question: "How much support do you want from us?",
     options: [
-      { id: 'A', text: "Have someone with expertise analyze what changed and adjust my plan accordingly." },
-      { id: 'B', text: "Understand the underlying mechanisms well enough to troubleshoot it myself." }
-    ]
+      { id: "dfy", label: "Done-for-you: strategy, copy structure, funnel/app design, build, automation, and launch support.", value: 3000 },
+      { id: "collaborative", label: "Collaborative: I will provide some copy/assets, and your team handles design, build, tech, and automation.", value: 1500 },
+      { id: "implementation", label: "Implementation only: I already have the copy/design direction and need the technical build.", value: 0 },
+    ],
   },
   {
     id: 4,
-    title: "Past Frustration",
+    question: "How soon do you want this launched?",
     options: [
-      { id: 'A', text: "They were too generic — I needed someone to look at my specific hormone patterns, work schedule, and stress levels." },
-      { id: 'B', text: "They didn't teach me WHY things work — I want to understand the science so I'm not dependent on rigid meal plans." }
-    ]
+      { id: "asap", label: "ASAP — I need this prioritized quickly.", value: 1.2 },
+      { id: "30_60", label: "Within the next 30 to 60 days.", value: 1.0 },
+      { id: "exploring", label: "I am exploring options for later this year.", value: 1.0 },
+    ],
   },
   {
     id: 5,
-    title: "Chaos / Travel Test",
+    question: "How would you prefer to pay for your project?",
     options: [
-      { id: 'A', text: "Want specific backup protocols designed for my exact travel patterns and work demands." },
-      { id: 'B', text: "Want to understand the principles well enough to adapt them to any situation myself." }
-    ]
+      { id: "one_time", label: "One-time payment — I want to pay the full project amount upfront.", value: 1.0 },
+      { id: "recurring", label: "Recurring plan — I prefer to pay monthly and get the current 50% discounted launch offer.", value: 0.5 },
+    ],
   },
-  {
-    id: 6,
-    title: "Identity Statement",
-    options: [
-      { id: 'A', text: "I execute flawlessly when I have expert guidance, but I second-guess myself when left to figure things out alone." },
-      { id: 'B', text: "I'm great at implementation once I understand the complete system and the science behind it." }
-    ]
-  },
-  {
-    id: 7,
-    title: "Expert Relationship Preference",
-    options: [
-      { id: 'A', text: "Ongoing access to ask questions about my specific situation and get personalized adjustments." },
-      { id: 'B', text: "Learning the complete operating system once, then being self-sufficient." }
-    ]
-  },
-  {
-    id: 8,
-    title: "Investment Goal",
-    options: [
-      { id: 'A', text: "Personal analysis of my metabolic patterns and a custom roadmap designed for my specific life." },
-      { id: 'B', text: "The complete knowledge base so I understand how to optimize my switchboard under any circumstances." }
-    ]
-  }
 ];
