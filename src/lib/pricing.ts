@@ -1,4 +1,5 @@
 import { PricingResult } from "@/types/quiz";
+export type { PricingResult };
 
 export function calculateQuote({
   basePrice,
